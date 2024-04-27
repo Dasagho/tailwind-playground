@@ -16,7 +16,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="">
+        <header className="bg-gray-400 fixed top-0 w-full">
+          <nav className="grid grid-cols-12">
+            <span className="col-start-1 col-end-3 m-2 text-xl text-center" id="logo">Admin Panel</span>
+            <ul className="flex col-start-9 col-end-11">
+              <li className="w-full flex items-center justify-center my-2" id="cat1">category 1</li>
+              <li className="w-full flex items-center justify-center my-2" id="cat2">category 2</li>
+              <li className="w-full flex items-center justify-center my-2" id="cat3">category 3</li>
+            </ul>
+            <span className="col-start-12 col-end-12 flex items-center justify-center my-2" id="profile"> user Profile</span>
+          </nav>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
